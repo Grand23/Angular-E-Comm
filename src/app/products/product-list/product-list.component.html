@@ -1,0 +1,23 @@
+<div *ngIf="loader" class="loader-container">
+    <div class="loader">
+        <p>loading products</p>
+    </div>
+</div>
+<div>
+    <div *ngFor="let Products of products">
+    
+        <p>
+            <a [routerLink]="['/user' , Products.userId]">{{Products.username}}</a>
+        </p>
+        <h4>{{Products.title}}</h4>
+        <img *ngIf="Products.image" [src]="Products.image" alt="{{ Products.image }}">
+        <p>{{Products.price}}</p>
+        <p>{{Products.description}}</p>
+        <p>{{Products.category}}</p>
+        <div class="post-details">
+            <p>{{Products.rating.rate}}</p>
+            <p>{{Products.rating.count}}</p>
+        </div>
+    </div>  
+</div>
+  

@@ -1,0 +1,12 @@
+<nav>
+    <span>E-comm</span>
+    <div>
+        <a routerLink="/Login" >Home</a>
+        <a routerLink="/product-list" >Products</a>
+        <a routerLink="/product-details" >Cart(0)</a>
+    </div>
+    <div *ngIf="currentUser">
+        <span >welcome</span>
+        <button (click)="logout()">Logout</button>
+    </div>
+</nav>
